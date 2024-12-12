@@ -1,0 +1,21 @@
+﻿<Page x:Class="WpfApp1.Views.CryptoDetailsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="CryptoDetailsPage">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Name:" FontWeight="Bold" />
+            <TextBlock Text="{Binding CryptoDetails.Name}" />
+            <TextBlock Text="Symbol:" FontWeight="Bold" />
+            <TextBlock Text="{Binding CryptoDetails.Symbol}" />
+            <TextBlock Text="Price:" FontWeight="Bold" />
+            <TextBlock Text="{Binding CryptoDetails.Price}" />
+            <TextBlock Text="Price:" FontWeight="Bold" />
+            <TextBlock Text="{Binding CryptoDetails.MarketCap}" />
+            <TextBlock Text="Volume (24h):" FontWeight="Bold" />
+            <TextBlock Text="{Binding CryptoDetails.Volume24h}" />
+            <TextBlock Text="Price Change (24h):" FontWeight="Bold" />
+            <TextBlock Text="{Binding CryptoDetails.PriceChange24h}" />
+        </StackPanel>
+    </Grid>
+</Page>

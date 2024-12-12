@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp1.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CryptoApp" Height="450" Width="800"
+        SizeChanged="Window_SizeChanged">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Switch Theme" VerticalAlignment="Top" HorizontalAlignment="Right" Click="OnThemeSwitchButtonClick" Panel.ZIndex="1"/>
+
+        <Frame x:Name="ContentFrame" NavigationUIVisibility="Hidden" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <ListView x:Name="listview" SelectionChanged="ListView_SelectionChanged" ItemsSource="{Binding TopCryptos}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ListView.View>
+                <GridView x:Name="gridView">
+                    <GridViewColumn x:Name="gridViewColumnName" Header="Name" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn x:Name="gridViewColumnSymbol" Header="Symbol" DisplayMemberBinding="{Binding Symbol}" />
+                    <GridViewColumn x:Name="gridViewColumnPrice" Header="Price" DisplayMemberBinding="{Binding Price}" />
+                    <GridViewColumn x:Name="gridViewColumnChange" Header="24h Change" DisplayMemberBinding="{Binding PriceChange24h}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
